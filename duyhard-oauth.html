@@ -34,13 +34,13 @@
   <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
   <script>
     var firebaseConfig = {
-      apiKey: "AIzaSyAVKOdJDCt8WYMk6ZL-GNYxyymxZYPi0c8",
+      apiKey: "-GNYxyymxZYPi0c8",
       authDomain: "duyhardweather.firebaseapp.com",
       databaseURL: "https://duyhardweather.firebaseio.com",
       projectId: "duyhardweather",
       storageBucket: "duyhardweather.appspot.com",
-      messagingSenderId: "491971176738",
-      appId: "1:491971176738:web:eb464cb9796dabc9a79d7b"
+      messagingSenderId: "",
+      appId: "1::web:eb464cb9796dabc9a79d7b"
     };
     firebase.initializeApp(firebaseConfig);
   </script>
@@ -54,7 +54,7 @@
     function toggleSignIn() {
       if (!firebase.auth().currentUser) {
         var provider = new firebase.auth.GoogleAuthProvider();
-        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+        //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
         firebase.auth().signInWithPopup(provider).then(function(result) {
           var token = result.credential.accessToken;
           var user = result.user;
