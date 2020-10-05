@@ -24,6 +24,9 @@
             <div>Google OAuth Access Token:</div>
             <pre><code id="quickstart-oauthtoken">Nothing</code></pre>
           </div>
+          <div>
+            Yahoo weather information: <div id="yahoo-weather">Nothing</div>
+          </div>
 <body>
 <!-- Copy and paste your Firebase web configuration to this area -->
 
@@ -35,7 +38,7 @@
       databaseURL: "https://duyhardweather.firebaseio.com",
       projectId: "duyhardweather",
       storageBucket: "duyhardweather.appspot.com",
-      messagingSenderId: "491971176738",
+      messagingSenderId: "",
       appId: "1::web:eb464cb9796dabc9a79d7b"
     };
     firebase.initializeApp(firebaseConfig);
@@ -105,7 +108,7 @@
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("quickstart-account-details").innerHTML = this.responseText;
+          document.getElementById("yahoo-weather").innerHTML = this.responseText;
         }
       };
       xhr.open('GET', 'https://weather-ydn-yql.media.yahoo.com/forecastrss\?location\=sunnyvale,ca&format=json');
