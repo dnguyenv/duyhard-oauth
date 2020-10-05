@@ -14,7 +14,8 @@
     
           <p>Click on the button below to Sign In/Out.</p>
           
-          <button id="quickstart-sign-in">Sign in with Google</button>
+          <button id="quickstart-sign-in">Sign in with Yahoo</button>
+          <button onclick="getWeatherInfo();" id="yahooWeather">Get Yahoo Weather</button>
 
           <div class="quickstart-user-details-container">
             Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
@@ -34,7 +35,7 @@
       databaseURL: "https://duyhardweather.firebaseio.com",
       projectId: "duyhardweather",
       storageBucket: "duyhardweather.appspot.com",
-      messagingSenderId: "",
+      messagingSenderId: "491971176738",
       appId: "1::web:eb464cb9796dabc9a79d7b"
     };
     firebase.initializeApp(firebaseConfig);
@@ -98,6 +99,20 @@
       initApp();
     };
   </script>  
+  <script>
+    function getWeatherInfo(){
+      var token = document.getElementById('quickstart-oauthtoken').textContent;
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("quickstart-account-details").innerHTML = this.responseText;
+        }
+      };
+      xhr.open('GET', 'https://weather-ydn-yql.media.yahoo.com/forecastrss\?location\=sunnyvale,ca&format=json');
+      xhr.setRequestHeader ("Authorization", "Bearer " + token);
+      xhr.send();
+    }
+  </script>
 </body>
 </body>
 </html>
