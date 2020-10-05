@@ -10,7 +10,7 @@
 </head>
 <body>
           <h2 class="mdl-card__title-text">Google OAuth example</h2>
-        </div>
+
     
           <p>Click on the button below to Sign In/Out.</p>
           
@@ -23,11 +23,6 @@
             <div>Google OAuth Access Token:</div>
             <pre><code id="quickstart-oauthtoken">Nothing</code></pre>
           </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</div>
 <body>
 <!-- Copy and paste your Firebase web configuration to this area -->
 
@@ -53,7 +48,7 @@
   <script type="text/javascript">
     function toggleSignIn() {
       if (!firebase.auth().currentUser) {
-        var provider = new firebase.auth.GoogleAuthProvider();
+        var provider = new firebase.auth.OAuthProvider('yahoo.com');
         //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
         firebase.auth().signInWithPopup(provider).then(function(result) {
           var token = result.credential.accessToken;
