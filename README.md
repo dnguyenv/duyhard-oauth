@@ -33,7 +33,7 @@ This will be the contents of your /js/firebase_creds.js it will look something l
 ## Create a Yahoo developer account, create an application 
 
 1. Visit https://developer.yahoo.com/apps/
-2. Creata an app
+2. Create an application
 3. For redirect url use the URL from the yahoo authentication in your firebase console. It will look something like this
 ![Redirect Example](images/redir.jpg)
 
