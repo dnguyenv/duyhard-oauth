@@ -34,7 +34,7 @@ This will be the contents of your /js/firebase_creds.js it will look something l
 
 1. Visit https://developer.yahoo.com/apps/
 2. Create an application
-3. For redirect url use the URL from the yahoo authentication in your firebase console. It will look something like this  
+3. For redirect URL use the URL from the yahoo authentication in your firebase console. It will look something like this  
 ![Redirect Example](images/redir.JPG)  
 
 4. Give the app the following permission   
@@ -52,8 +52,15 @@ $ cordova platform add browser
 ```
 Now replace the contents of the myProj/www folder with the contents provided here
 
+Finally
+
+```bash
+$ cordova emulate browser
+```
+
 
 
 Click on the `Sign in with Yahoo` button, and Login with your Yahoo credentials. You can `Sign out/in` multiple times.
+The page should look something like this.
 
-![Google example](images/example.png)
+![Yahoo example](images/example.JPG)
