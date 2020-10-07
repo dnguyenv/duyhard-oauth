@@ -34,13 +34,13 @@ This will be the contents of your /js/firebase_creds.js it will look something l
 
 1. Visit https://developer.yahoo.com/apps/
 2. Create an application
-3. For redirect url use the URL from the yahoo authentication in your firebase console. It will look something like this
-![Redirect Example](images/redir.JPG)
+3. For redirect url use the URL from the yahoo authentication in your firebase console. It will look something like this  
+![Redirect Example](images/redir.JPG)  
 
-4. Give the app the following permission 
-![Permissions Example](images/permissions.JPG)
+4. Give the app the following permission   
+![Permissions Example](images/permissions.JPG)  
 
-5. Take your client ID and Client Secret and enter them into your firebase application under Authenticaion->Yahoo
+5. Take your client ID and Client Secret and enter them into your firebase application under Authenticaion->Yahoo  
 
 ## Run the code
 
