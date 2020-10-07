@@ -38,7 +38,7 @@ This will be the contents of your /js/firebase_creds.js it will look something l
 ![Redirect Example](images/redir.jpg)
 
 4. Give the app the following permission 
-![Permissions Example(images/permissions.jpg)
+![Permissions Example](images/permissions.jpeg)
 
 5. Take your client ID and Client Secret and enter them into your firebase application under Authenticaion->Yahoo
 
